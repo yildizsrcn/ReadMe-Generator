@@ -10,7 +10,7 @@ const generateMarkdown = require("./utils/generateMarkdown");
       {
         type: `input`,
         message: `What's the project title?`,
-        name: `Title`,
+        name: `title`,
         validate: (value)=>{ if(value){return true} else {return `I need a value to continue`}}
       },      
 
@@ -24,7 +24,7 @@ const generateMarkdown = require("./utils/generateMarkdown");
       {
         type: `input`,
         message: `usage information`,
-        name: `Usage`,
+        name: `usage`,
         validate: (value)=>{ if(value){return true} else {return `I need a value to continue`}}
       },
 
@@ -59,6 +59,13 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
       {
         type: `input`,
+        message: `Linkedin username`,
+        name: `linkedin`,
+        validate: (value)=>{ if(value){return true} else {return `I need a value to continue`}}
+      },
+
+      {
+        type: `input`,
         message: `E-mail?`,
         name: `email`,
         validate: (value)=>{ if(value){return true} else {return `I need a value to continue`}}
@@ -82,44 +89,54 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 
 ##Installation
+
 ${installation}
 
 ##Usage
+
 ${usage}
 
 #Contribution
+
 ${contributing}
 
 
 #Tests
+
 ${tests}
 
-
-#Credits
-${credit};
-
 #License
-${license};
+
+${license}
 
 
 
 #Contact
-*Github: ${git};
-*Linkedin: ${linkedin};
-*E-mail: ${email} `;
+
+
+*Github: 
+
+${git}
+
+*Linkedin: 
+
+${linkedin}
+
+*E-mail: 
+
+${email} `;
 
 createNewFile(template);
 
 } );
 
 function createNewFile(data){
-    fs.writeFile('README.md'),data,(err)=>{
+    fs.writeFile("GeneratedREADME.md",data,(err)=>{
       if(err){
-        console.log(err);
-
+        console.log(err)
       }
       console.log('Your README has been created');
-    }
+    })
 }
 
 
