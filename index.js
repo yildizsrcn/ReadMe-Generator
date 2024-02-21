@@ -108,20 +108,19 @@ ${license};
         
 
 
-createNewFile(title,template);
+createNewFile(template);
 
 });
 
 
-function createNewFile(fileName,data){
-    fs.writeToFile(`./${fileName.toLowerCase().split(' ').join('')}.md`,data,(err)=>{
+
+function createNewFile(data){
+    fs.writeFile(`README.md`,data,(err)=>{
       if(err){
         console.log(err)
       }
       console.log('Your README has been generated');
     }
-
-
 )}
 
 

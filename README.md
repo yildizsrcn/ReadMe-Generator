@@ -1,9 +1,28 @@
-# ReadMe-Generator
+# undefined
 
-This program prepares spesific Readme files according to your information.
+#Table of Content
+##installation
+undefined
 
-I used on this project Html, Json and Javascript.
+##usage
+undefined
 
-DEPLOYED: https://yildizsrcn.github.io/Weather-Dashboard/
+##tests
+undefined
 
-GIT REPO: https://github.com/yildizsrcn/Weather-Dashboard
+##Contribution
+undefined
+
+
+#Credits
+undefined;
+
+#License
+undefined;
+
+
+
+#Contact
+*Github: undefined;
+*Linkedin: undefined;
+*E-mail: undefined 
