@@ -4,7 +4,7 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
-// const questions = [
+// const questions = 
     inquirer.prompt(
       {
         type: `input`,
@@ -44,7 +44,7 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
       {
         type: `input`,
-        message: `Test`,
+        message: `How do you test the project?`,
         name: `tests`,
         validate: (value)=>{ if(value){return true} else {return `I need a value to continue`}}
       },
@@ -60,33 +60,36 @@ const generateMarkdown = require("./utils/generateMarkdown");
         type: `input`,
         message: `E-mail?`,
         name: `email`,
-        validate: (value)=>{ if(value){return true} else {return `I need a value to continue`}}
+        validate: (value)=>{ if(value){return true} else {return `I need a value to continue`}},
       }
-      );
 
-then(({
-    title,
-    installation,
-    usage,
-    license,
-    git,
-    linkedin,
-    email,
-    contributing,
-    tests,
-    git,
-    email
-})=>{
-    const template = `# ${title}
+      ).then(({
+      title,
+      installation,
+      instructions,
+      credit,
+      license,
+      git,
+      linkedin,
+      email,
+      usage,
+      tests,
+      contributing
 
+      })=>{
+        const template = `# ${title}
 
+#Table of Content
 ##installation
 ${installation}
 
 ##usage
 ${usage}
 
-#Contribution
+##tests
+${tests}
+
+##Contribution
 ${contributing}
 
 
@@ -102,13 +105,16 @@ ${license};
 *Github: ${git};
 *Linkedin: ${linkedin};
 *E-mail: ${email} `;
+        
+
 
 createNewFile(title,template);
 
-} );
+});
+
 
 function createNewFile(fileName,data){
-    fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`,data,(err)=>{
+    fs.writeToFile(`./${fileName.toLowerCase().split(' ').join('')}.md`,data,(err)=>{
       if(err){
         console.log(err)
       }
@@ -126,7 +132,12 @@ function createNewFile(fileName,data){
 
 // // function to initialize program
 // function init() {
-
+//   inquirer.prompt(questions)
+//     .then(function (data) {
+//       console.log(data);
+//       const markdownContent = generateMarkdown(data)
+//       writeToFile(markdownContent)
+//     });
 // }
 
 // // function call to initialize program
