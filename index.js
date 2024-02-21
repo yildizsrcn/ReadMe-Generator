@@ -4,8 +4,9 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
-// const questions = 
+// const questions = [
     inquirer.prompt(
+[
       {
         type: `input`,
         message: `What's the project title?`,
@@ -44,7 +45,7 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
       {
         type: `input`,
-        message: `How do you test the project?`,
+        message: `Test`,
         name: `tests`,
         validate: (value)=>{ if(value){return true} else {return `I need a value to continue`}}
       },
@@ -60,37 +61,38 @@ const generateMarkdown = require("./utils/generateMarkdown");
         type: `input`,
         message: `E-mail?`,
         name: `email`,
-        validate: (value)=>{ if(value){return true} else {return `I need a value to continue`}},
+        validate: (value)=>{ if(value){return true} else {return `I need a value to continue`}}
       }
+      
+]
+).then(({
+    title,
+    installation,
+    usage,
+    license,
+    linkedin,
+    email,
+    contributing,
+    tests,
+    git
+})=>{
+    const template = `
+    
+# ${title}
 
-      ).then(({
-      title,
-      installation,
-      instructions,
-      credit,
-      license,
-      git,
-      linkedin,
-      email,
-      usage,
-      tests,
-      contributing
 
-      })=>{
-        const template = `# ${title}
-
-#Table of Content
-##installation
+##Installation
 ${installation}
 
-##usage
+##Usage
 ${usage}
 
-##tests
-${tests}
-
-##Contribution
+#Contribution
 ${contributing}
+
+
+#Tests
+${tests}
 
 
 #Credits
@@ -105,38 +107,30 @@ ${license};
 *Github: ${git};
 *Linkedin: ${linkedin};
 *E-mail: ${email} `;
-        
-
 
 createNewFile(template);
 
-});
-
-
+} );
 
 function createNewFile(data){
-    fs.writeFile(`README.md`,data,(err)=>{
+    fs.writeFile('README.md'),data,(err)=>{
       if(err){
-        console.log(err)
+        console.log(err);
+
       }
-      console.log('Your README has been generated');
+      console.log('Your README has been created');
     }
-)}
+}
 
 
 
-// // function to write README file
+// function to write README file
 // function writeToFile(fileName, data) {
 // }
 
 // // function to initialize program
 // function init() {
-//   inquirer.prompt(questions)
-//     .then(function (data) {
-//       console.log(data);
-//       const markdownContent = generateMarkdown(data)
-//       writeToFile(markdownContent)
-//     });
+
 // }
 
 // // function call to initialize program
