@@ -66,7 +66,7 @@ Please follow below steps;
 
 ## Demo Video
 
-
+[Click for Video](https://github.com/yildizsrcn/ReadMe-Generator/assets/152069155/8d811d20-38bd-4b47-9538-6c8e334ea910)
 
 ## License
 
