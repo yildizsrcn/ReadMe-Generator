@@ -27,7 +27,7 @@ Then, you should follow below steps:
 ### Steps
 
 - Step 1
-  - Clone this [Repo](https://github.com/SebZG/README-generator) on to your computer.
+  - Clone this [Repo](https://github.com/yildizsrcn/ReadMe-Generator) on to your computer.
 - Step 2
   - Open your VScode from folder of `README-generator` Repo (The one you cloned) and install dependencies with the following commands:
   ```bash
@@ -67,7 +67,7 @@ Please follow below steps;
 
 ## License
 
-This application is covered under the MIT License.
+This application has MIT License.
 
 ## Contributing
 
