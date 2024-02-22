@@ -2,6 +2,9 @@ ReadMe Generator
 
 # README Generator
 
+Git Repo: https://github.com/yildizsrcn/ReadMe-Generator
+
+Deployed: https://yildizsrcn.github.io/ReadMe-Generator/
 
 ## Description
 
