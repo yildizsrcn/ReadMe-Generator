@@ -33,6 +33,7 @@ Then, you should follow below steps:
   ```bash
   npm install
   ```
+P.S.: JUST BE CAREFULL BEING ON CORRECT FOLDER BEFORE YOU INSTALL NPM. 
 
 ## Usage
 
