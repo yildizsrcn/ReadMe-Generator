@@ -88,43 +88,34 @@ const generateMarkdown = require("./utils/generateMarkdown");
 # ${title}
 
 
-##Installation
+## Installation
 
 ${installation}
 
-##Usage
+## Usage
 
 ${usage}
 
-#Contribution
+# Contribution
 
 ${contributing}
 
 
-#Tests
+# Tests
 
 ${tests}
 
-#License
+# License
 
 ${license}
 
 
 
-#Contact
+# Contact
 
-
-*Github: 
-
-${git}
-
-*Linkedin: 
-
-${linkedin}
-
-*E-mail: 
-
-${email} `;
+- Github: ${git}
+- Linkedin: ${linkedin}
+- E-mail: ${email} `;
 
 createNewFile(template);
 
